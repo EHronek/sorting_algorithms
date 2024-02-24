@@ -22,4 +22,8 @@ void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
+int lemuto_partition(int *array, int upper, int lower);
+void quick_sorting(int *array, int lower, int upper);
+
 #endif
