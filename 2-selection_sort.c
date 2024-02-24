@@ -5,6 +5,7 @@
   * selection_sort - sorts an array of integers in ascending order
   *      using selction sort
   * @array: the array to sort using selection sort
+  * @size: the siz of the array
   * Return: nothing
   */
 void selection_sort(int *array, size_t size)
