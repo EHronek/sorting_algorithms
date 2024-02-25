@@ -19,7 +19,7 @@ void quick_sort(int *array, size_t size)
   * @upper: ending index of the partition
   * Return: returns an index pivot element after partitioning
   */
-int lemuto_partition(int *array, int upper, int lower)
+int lemuto_partition(int *array, int lower, int upper)
 {
 	int pivot = array[upper];
 	int i = lower - 1;
@@ -30,22 +30,16 @@ int lemuto_partition(int *array, int upper, int lower)
 		if (array[j] <= pivot)
 		{
 			i++;
-			if (i != j)
-			{
-				temp = array[i];
-				array[i] = array[j];
-				array[j] = temp;
-				print_array(array, upper - lower + 1);
-			}
+			temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+			print_array(array, upper - lower + 1);
 		}
 	}
-	if ((i + 1) != upper)
-	{
-		temp = array[i + 1];
-		array[i + 1] = array[upper];
-		array[upper] = temp;
-		print_array(array, upper - lower + 1);
-	}
+	temp =  array[i + 1];
+	array[i + 1] = array[upper];
+	array[upper] = temp;
+	print_array(array, upper - lower + 1);
 	return (i + 1);
 }
 /**
